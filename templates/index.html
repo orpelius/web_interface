@@ -18,15 +18,19 @@
             <p class="mb-6 italic text-slate-900 text-center">Your authenticity news companion</p> -->
 
             <form method="POST" action="{{ url_for('home') }}" class="mx-auto w-2/3 shadow-lg p-6">
+                 <div class="flex flex-col sm:flex-row gap-4 justify-between mb-4">
+                    <input id="title" name="title" type="text" class="block w-1/2 px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-800 focus:border-blue-800 sm:text-sm" required placeholder="News title (Required)">
+                    <input id="author" name="news_author" type="text" class="block w-1/2 px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-800 focus:border-blue-800 sm:text-sm" required placeholder="News author (Required)">
+                </div>
                 <!-- News Content Input -->
                 <div class="mb-4">
                     <textarea id="news_content" name="news_content" rows="10" class="block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-800 focus:border-blue-800 sm:text-sm" required placeholder="News article (Required)"></textarea>
                 </div>
 
                 <!-- News Source Input -->
-                <div class="mb-4">
+<!--                 <div class="mb-4">
                     <input id="source" name="news_source" type="text" class="block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-800 focus:border-blue-800 sm:text-sm" required placeholder="News source (Required)">
-                </div>
+                </div> -->
 
                 <!-- Analyse and Clear Buttons -->
                 <div class="flex justify-between">
