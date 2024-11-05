@@ -3,6 +3,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 import pandas as pd
 import pickle
 import numpy as np
+import os
 
 
 model = pickle.load(open('model_2.pkl', 'rb'))
@@ -45,4 +46,6 @@ def home():
 
 
 if __name__ == "__main__":
+    port = int(os.environ.get('PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
     app.run(debug=True)
